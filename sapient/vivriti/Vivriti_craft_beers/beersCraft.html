@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+
+    <title>Vivriti Crafts Beer</title>
+</head>
+
+<body>
+    <div class="mainContainer" ng-app="instantSearch" ng-controller="InstantSearchController">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Vivriti Crafts Beer</a>
+                </div>
+
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="bar">
+
+                        <input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+                    </div>
+                </form>
+                <div class="checkbox">
+                    <label>
+                        <input class="check_box" type="checkbox" value="" ng-model="sortScore" ng-change="sorted()">Sort by score</label>
+                </div>
+            </div>
+        </nav>
+
+        <div class="context_container">
+            <div class="row nopadding ">
+                <div class="col-sm-3 nopadding side_image hidden-xs">
+                     <img src="http://www.stickpng.com/assets/images/580b57fbd9996e24bc43c092.png" alt="">
+                     
+                    <img src="http://www.stickpng.com/assets/images/580b57fbd9996e24bc43c090.png" alt="">
+                    <img src="http://www.stickpng.com/assets/images/58418320a6515b1e0ad75a35.png" 
+                        alt=""> 
+                </div>
+                <div class="col-sm-6 nopadding">
+                    <div class="innerBox">
+                        <div class="innerDescpBox" ng-hide="hideMe">
+                            <span class="game_title2">{{title_name}}</span>
+                            <span class="other_details2">Style: {{style}}</span>
+                            <span class="other_details2">Ounces:{{ounces}}</span>
+                            <span class="other_details2">Product ID: {{id}}</span>
+                            <span class="other_details2">ABV:{{abv}}
+                            </span>
+
+                        </div>
+                        <img src="https://wallpapercave.com/wp/vI978Ac.jpg" class="img-responsive" alt="Cinque Terre">
+
+
+                    </div>
+                    <ul class="game_list">
+                        <li class="game_details" ng-repeat="i in content | startFrom:currentPage*pageSize | limitTo:pageSize | searchFor:searchString | orderBy : doSorting" ng-click="select($index)"
+                            ng-class="{active_class: $index == selected}">
+                            <div class="row">
+                                <div class="col-sm-2 col-xs-4">
+                                    <img class="game_img" src="https://wallpapercave.com/wp/fHiERVS.jpg"
+                                        alt="">
+                                </div>
+                                <div class="col-sm-10 col-xs-8">
+                                    <span class="game_title">{{i.name}}</span>
+                                    <span class="other_details">Style: {{ i.style}}</span>
+                                    <span class="other_details">Ounces: {{i.ounces}}</span>
+                                    <span class="other_details">Product ID: {{i.id}}</span>
+                                    <span class="other_details">ABV: {{i.abv}}</span>
+
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+                        Previous
+                    </button><span class="pager-text">{{currentPage+1}}</span>
+                    
+                    <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+                        Next
+                    </button>
+                </div>
+                <div class="col-sm-3 nopadding hidden-xs">
+                    <img src="http://www.stickpng.com/assets/images/584180dea6515b1e0ad75a30.png" alt="">
+                    <img src="http://www.stickpng.com/assets/images/585e5337cb11b227491c33af.png" alt="">
+                    <img src="http://www.stickpng.com/assets/images/585e5463cb11b227491c33b5.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

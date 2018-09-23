@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+
+    <title>Sapient Games Arena</title>
+</head>
+
+<body>
+    <div class="mainContainer" ng-app="instantSearch" ng-controller="InstantSearchController">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Games Arena</a>
+                </div>
+
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="bar">
+                        
+                        <input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+                    </div>
+                </form>
+                <div class="checkbox">
+                    <label>
+                        <input class="check_box" type="checkbox" value="" ng-model="sortScore" ng-change="sorted()">Sort by score</label>
+                </div>
+            </div>
+        </nav>
+
+        <div class="context_container">
+            <div class="row nopadding ">
+                <div class="col-sm-3 nopadding side_image hidden-xs">
+                    <img src="https://i.pinimg.com/originals/0b/c0/ab/0bc0ab1776588a67b00f606661fd1076.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/D%C3%A9s.jpg" alt="">
+                    <img src="http://www.seriouswheels.com/pics-2009/a/2009-Audi-Sportback-Concept-Front-Lights-Black-Background-4-1920x1440.jpg"
+                        alt="">
+                </div>
+                <div class="col-sm-6 nopadding">
+                    <div class="innerBox">
+                        <div class="innerDescpBox" ng-hide="hideMe">
+                            <span class="game_title2">{{title_name}}</span>
+                            <span class="other_details2">Platform: {{platform_name}}</span>
+                            <span class="other_details2">Realease year:{{release_year_date}}</span>
+                            <span class="other_details2">Genre: {{genre_name}}</span>
+                            <span class="other_details2">Editors Choice:{{editors_choice}}
+                            </span>
+                            <span class="other_details2">Score: {{score}}
+                            </span>
+                        </div>
+                        <img src="assets/backImage.jpg" class="img-responsive" alt="Cinque Terre">
+
+
+                    </div>
+                    <ul class="game_list">
+                        <li class="game_details" ng-repeat="i in content | searchFor:searchString | orderBy : doSorting" ng-click="select($index)"
+                            ng-class="{active_class: $index == selected}">
+                            <div class="row">
+                                <div class="col-sm-2 col-xs-4">
+                                    <img class="game_img" src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                                        alt="">
+                                </div>
+                                <div class="col-sm-10 col-xs-8">
+                                    <span class="game_title">{{i.title}}</span>
+                                    <span class="other_details">Platform: {{ i.platform}}</span>
+                                    <span class="other_details">Realease year: {{i.release_year}}</span>
+                                    <span class="other_details">Genre: {{i.genre}}</span>
+                                    <span class="other_details">Editors Choice: {{i.editors_choice}}</span>
+                                    <span class="other_details">Score: {{i.score}}</span>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-sm-3 nopadding hidden-xs"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

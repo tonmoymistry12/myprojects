@@ -1,0 +1,203 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background: #000 !important;
+}
+
+.context_container {
+    margin-top: 30px;
+}
+
+.navbar-header {
+    margin-right: 45px !important;
+}
+
+.navbar-form {
+    border-right: 1px solid #fff !important;
+}
+
+.check_box {
+    width: 21px;
+    height: 22px;
+    margin: 0 95px !important;
+    
+}
+
+.navbar-inverse {
+    border-bottom: 1px solid #7164642e !important;
+    background: rgba(43, 40, 41, 0.72) !important;
+}
+
+.navbar {
+    border-radius: 0 !important;
+}
+
+label {
+    color: #fff;
+    margin-top: 8px;
+    padding-left: 13px !important;
+}
+
+.mainContainer {
+    width: 100%;
+    background: url(https://vignette.wikia.nocookie.net/metro2033/images/7/73/SteamBackgroundLastHope.jpg/revision/latest?cb=20130813015514) no-repeat;
+    background-size: contain, cover;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.innerBox {
+    height: 350px;
+    position: relative;
+}
+
+.innerBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.innerDescpBox {
+    position: absolute;
+    background: #0000007a;
+    width: 40%;
+    height: 80%;
+    left: 2px;
+    /* top: 22px; */
+    /* border-radius: 50%; */
+    padding: 50px;
+    color: #fff;
+    border: 1px solid #fb3430;
+}
+
+/*search bar styles starts*/
+
+.bar {
+    /* background-color: #5c9bb7; */
+    /* background-image: -webkit-linear-gradient(top, #5c9bb7, #5392ad); */
+    background-image: -moz-linear-gradient(top, #5c9bb7, #5392ad);
+    background-image: linear-gradient(top, #5c9bb7, #5392ad);
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 2px;
+    width: 265px;
+    padding: 0;
+    margin: 0px 0px;
+    display: inline-block;
+    /* position: relative; */
+}
+
+.bar input {
+    background: #fff no-repeat 13px 13px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU5NEY0RTlFMTA4NzExRTM5RTEzQkFBQzMyRjkyQzVBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU5NEY0RTlGMTA4NzExRTM5RTEzQkFBQzMyRjkyQzVBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTk0RjRFOUMxMDg3MTFFMzlFMTNCQUFDMzJGOTJDNUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTk0RjRFOUQxMDg3MTFFMzlFMTNCQUFDMzJGOTJDNUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4DjA/RAAABK0lEQVR42pTSQUdEURjG8dOY0TqmPkGmRcqYD9CmzZAWJRHVRIa0iFYtM6uofYaiEW2SRJtEi9YxIklp07ZkWswu0v/wnByve7vm5ee8M+85zz1jbt9Os+WiGkYdYxjCOx5wgFeXUHmtBSzpcCGa+5BJTCjEP+0nKWAT8xqe4ArPGEEVC1hHEbs2oBwdXkM7mj/JLZrad437sCGHOfUtcziutuYu2v8XUFF/4f6vMK/YgAH1HxkBYV60AR31gxkBYd6xAeF3VzMCwvzOBpypX8V4yuFRzX2d2gD/l5yjH4fYQEnzkj4fae5rJulF2sMXVrAsaTWttRFu4Osb+1jEDT71/ZveyhouTch2fINQL9hKefKjuYFfuznXWzXMTabyrvfyIV3M4vhXgAEAUMs7K0J9UJAAAAAASUVORK5CYII=);
+    border: none;
+    width: 100%;
+    line-height: 19px;
+    padding: 11px 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px #0f0f0f inset;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    color: #738289;
+    outline: none;
+    text-indent: 40px;
+}
+
+.navbar {
+    margin-bottom: 0 !important;
+}
+
+.game_list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.side_image>img {
+    width: 100%;
+}
+
+.game_details {
+    min-height: 100px;
+    width: 100%;
+    background: #273238;
+    border-radius: 7px;
+    margin: 5px 0;
+    border: 1px solid rgba(184, 149, 149, 0.19);
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+.game_img {
+    width: 100px;
+    height: 85px;
+    border: 1px solid #fff;
+}
+
+.game_title {
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+}
+
+.other_details {
+    color: #7f8f96;
+    font-size: 12px;
+    display: block;
+}
+
+.active_class {
+    background: #dd173b !important;
+    color: #fff !important;
+}
+
+.game_title2 {
+    text-transform: uppercase;
+    color: yellow;
+    display: block;
+    font-size: 18px;
+    margin-bottom:10px;
+}
+
+.other_details2 {
+    color: #fff;
+    font-size: 15px;
+    display: block;
+}
+.navbar-inverse .navbar-brand {
+    color: #d2002b !important;
+    text-shadow: 2px 4px #ff000059;
+    font-size: 24px;}
+    .checkbox{
+        display:inline-block !important;
+    }
+
+@media only screen and (max-width: 600px) {
+    .innerDescpBox {
+        height: auto;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .navbar-form {
+        border-right: none !important;
+    }
+    .navbar-header {
+        margin: 0 !important;
+    }
+    .navbar-header>a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    .bar {
+        width: 100%;
+    }
+    
+}
+
+/*search bar styles end*/
